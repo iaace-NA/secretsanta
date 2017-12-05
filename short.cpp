@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <vector>
 #include <functional>
+#include <random>
 //compile -std=c++11
 const std::string gift(const std::list<std::string>& contents);
 template <class T> void shuffle(std::list<T>& lst);
