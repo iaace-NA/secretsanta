@@ -5,7 +5,6 @@
 #include <vector>
 #include <functional>
 //compile -std=c++11
-std::ostream& operator<<(std::ostream& output, const std::list<std::string>& contents);
 const std::string gift(const std::list<std::string>& contents);
 template <class T> void shuffle(std::list<T>& lst);
 int main() {
@@ -18,10 +17,6 @@ int main() {
 	shuffle(names);
 	std::cout << "Who gifts who:\n" << gift(names) << std::endl;
 	return 0;
-}
-std::ostream& operator<<(std::ostream& output, const std::list<std::string>& contents) {
-    for (std::list<std::string>::const_iterator i = contents.begin(); i != contents.end(); ++i) output << *i << "\n";
-    return output;
 }
 template <class T> void shuffle(std::list<T>& lst) { // shuffle contents of a list
     std::vector< std::reference_wrapper< const T > > vec(lst.begin(), lst.end());// create a vector of (wrapped) references to elements in the list
