@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <vector>
 #include <functional>
+#include <random>
 //compile -std=c++11
 std::ostream& operator<<(std::ostream& output, const std::list<std::string>& contents);
 const std::string gift(const std::list<std::string>& contents);
